@@ -2,36 +2,15 @@
 
 name: 'Template Action'
 description: 'Project Template for Deno GitHub Actions.'
-author: 'Author'
+author: 'Mqxx'
 branding:
-  icon: 'award'
-  color: 'green'
+  icon: 'droplet'
+  color: 'purple'
 
 inputs:
-  custom-text-input:
-    description: 'This is the description for a custom input.'
-    required: false
-    default: 'DefaultValue'
-
-  custom-list-input:
-    description: 'This is the description for a custom input.'
-    required: false
-    default: |
-      - Item1
-      - Item2
-      - Item3
-
-  custom-key-value-input:
-    description: 'This is the description for a custom input.'
-    required: false
-    default: |
-      key1: value1
-      key2: value2
-
-
-outputs:
-  custom-text-output:
-    description: 'This is the description for a custom output.'
+  path:
+    description: 'Relative path under $GITHUB_WORKSPACE to look for the resourcepack assets.'
+    required: true
 
 runs:
   using: 'docker'
