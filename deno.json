@@ -49,8 +49,7 @@
     "lineWidth": 120
   },
   "imports": {
-    "@actions/core": "npm:@actions/core",
-    "@std/yaml": "jsr:@std/yaml"
+    "@actions/core": "npm:@actions/core"
   }
 }
 
