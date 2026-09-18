@@ -1,7 +1,8 @@
 import * as actionsCore from '@actions/core';
 import { loadBlockColor } from './color/load_block_color.ts';
 
-const assetsPath = actionsCore.getInput('path');
+const resourcePackPath = actionsCore.getInput('path');
+const assetsPath = `${resourcePackPath}/assets`;
 const outputPath = actionsCore.getInput('output') || 'block-colors.json';
 const blockstatesDir = `${assetsPath}/minecraft/blockstates`;
 
