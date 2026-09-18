@@ -50,7 +50,7 @@
   },
   "imports": {
     "@actions/core": "npm:@actions/core",
-    "@img/png": "jsr:@img/png@^0.1.6"
+    "@cross/image": "jsr:@cross/image"
   }
 }
 

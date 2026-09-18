@@ -3,7 +3,7 @@ import { loadBlockColor } from './color/load_block_color.ts';
 
 const resourcePackPath = actionsCore.getInput('path');
 const assetsPath = `${resourcePackPath}/assets`;
-const outputPath = actionsCore.getInput('output') || 'block-colors.json';
+const outputPath = actionsCore.getInput('output') || 'block_colors.json';
 const blockstatesDir = `${assetsPath}/minecraft/blockstates`;
 
 const colors: Record<string, string> = {};

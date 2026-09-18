@@ -1,4 +1,4 @@
-import { decodePNG } from '@img/png/decode';
+import { Image } from '@cross/image';
 import { Blockstate } from '../blockstate/blockstate.ts';
 import { getDefaultModel } from '../blockstate/get_default_model.ts';
 import { resolveModelTextures } from '../model/resolve_model_textures.ts';
@@ -24,8 +24,8 @@ export async function loadBlockColor(assetsPath: string, blockstatePath: string)
   const texturePath = `${assetsPath}/${texture.namespace}/textures/${texture.path}.png`;
 
   const bytes = await Deno.readFile(texturePath);
-  const { body } = await decodePNG(bytes);
+  const image = await Image.decode(bytes);
 
-  const color = averageColor(body);
+  const color = averageColor(image.data);
   return color === undefined ? undefined : toHex(color);
 }

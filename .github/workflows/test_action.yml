@@ -33,4 +33,10 @@ jobs:
         uses: './'
         with:
           path: './assets'
+          output: 'block_colors.json'
+      
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v7
+        with:
+          path: 'block_colors.json'
 
