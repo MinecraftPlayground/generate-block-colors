@@ -1,0 +1,58 @@
+{
+  "license": "./LICENSE",
+  "tasks": {
+    "action": "deno run -A ./src/action.ts",
+    "cache": "deno cache ./src/action.ts",
+    "lint": "deno lint",
+    "test": "deno test -A --unstable --check --reload --doc --allow-none --junit-path=\"./report.xml\""
+  },
+  "compilerOptions": {
+    "lib": [
+      "decorators",
+      "esnext",
+      "deno.window",
+      "deno.ns",
+      "deno.worker",
+      "webworker"
+    ]
+  },
+  "nodeModulesDir": "none",
+  "test": {
+    "include": [
+      "**/*.test.ts"
+    ]
+  },
+  "lint": {
+    "report": "pretty",
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "include": [
+        "camelcase",
+        "default-param-last",
+        "eqeqeq",
+        "explicit-function-return-type",
+        "explicit-module-boundary-types",
+        "guard-for-in",
+        "no-eval",
+        "no-sparse-arrays",
+        "prefer-ascii"
+      ],
+      "exclude": [
+        "no-inferrable-types"
+      ]
+    }
+  },
+  "fmt": {
+    "singleQuote": true,
+    "lineWidth": 120
+  },
+  "imports": {
+    "@actions/core": "npm:@actions/core",
+    "@std/yaml": "jsr:@std/yaml"
+  }
+}
+
+
+

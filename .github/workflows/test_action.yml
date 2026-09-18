@@ -1,0 +1,40 @@
+name: 'Test Action'
+
+on:
+  push:
+    branches:
+      - 'main'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  test-action:
+    name: 'Test Action'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Setup Repository (${{github.event.repository.name}})'
+        uses: actions/checkout@v4
+      
+      - name: 'Test Action input'
+        id: test
+        uses: './'
+        with:
+          custom-text-input: 'Test123'
+          custom-list-input: |
+            - Item4
+            - Item5
+            - Item6
+
+          custom-key-value-input: |
+            key3: value3
+            key4: value4
+
+      - name: 'Test Action output'
+        run: |
+          echo "Output: ${{ steps.test.outputs.custom-text-output }}"
+
