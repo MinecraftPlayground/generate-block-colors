@@ -1,7 +1,7 @@
 # https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions
 
-name: 'Template Action'
-description: 'Project Template for Deno GitHub Actions.'
+name: 'Generate Block Colors'
+description: 'Generate a color map for all blocks, based on the top texture.'
 author: 'Mqxx'
 branding:
   icon: 'droplet'
