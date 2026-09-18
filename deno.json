@@ -49,7 +49,8 @@
     "lineWidth": 120
   },
   "imports": {
-    "@actions/core": "npm:@actions/core"
+    "@actions/core": "npm:@actions/core",
+    "@img/png": "jsr:@img/png@^0.1.6"
   }
 }
 

@@ -20,7 +20,15 @@ jobs:
       - name: 'Setup Repository (${{github.event.repository.name}})'
         uses: actions/checkout@v7
       
-      - name: 'Test Action input'
+      - name: 'Generate assets to "./default_assets"'
+        id: generate_assets
+        uses: MinecraftPlayground/generate-assets@main
+        with:
+          version: 26.3
+          path: './assets'
+          parallel-downloads: 10
+      
+      - name: 'Test Action'
         id: test
         uses: './'
         with:
