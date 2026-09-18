@@ -11,6 +11,14 @@ inputs:
   path:
     description: 'Relative path under $GITHUB_WORKSPACE to look for the resourcepack assets.'
     required: true
+  output:
+    description: 'Path to write the generated block-color JSON map to.'
+    required: false
+    default: 'block-colors.json'
+
+outputs:
+  path:
+    description: 'Path to the generated block-color JSON file.'
 
 runs:
   using: 'docker'
