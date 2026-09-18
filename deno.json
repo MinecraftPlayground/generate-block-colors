@@ -1,8 +1,8 @@
 {
   "license": "./LICENSE",
   "tasks": {
-    "action": "deno run -A ./src/action.ts",
-    "cache": "deno cache ./src/action.ts",
+    "action": "deno run -A ./src/index.ts",
+    "cache": "deno cache ./src/index.ts",
     "lint": "deno lint",
     "test": "deno test -A --unstable --check --reload --doc --allow-none --junit-path=\"./report.xml\""
   },
